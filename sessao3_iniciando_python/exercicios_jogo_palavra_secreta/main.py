@@ -17,33 +17,31 @@ usuário.
 
 import os
 
-palavra_secreta = 'perfume'
-letras_acertadas = ''
-numero_tentativas = 0
+palavra_secreta = 'aluno'
+recebe_palavra = ''
+tentativas = 0
 while True:
-    letra_digitada = input('Digite uma letra: ')
-    numero_tentativas += 1
-
-    if len(letra_digitada) > 1:
-        print('Digite apenas uma letra.')
+    recebe_letra = input('Digite apenas uma letra: ')
+    tentativas += 1
+    if len(recebe_letra) > 1:
+        print('DIGITE APENAS UMA LETRA!!')
         continue
 
-    if letra_digitada in palavra_secreta:
-        letras_acertadas += letra_digitada
+    if recebe_letra in palavra_secreta:
+        recebe_palavra += recebe_letra
+    print(recebe_palavra)
+    print(f'{tentativas} tentativa(s)')
 
-    palavra_formada = ''
-    for letra_secreta in palavra_secreta:
-        if letra_secreta in letras_acertadas:
-            palavra_formada += letra_secreta
+    forma_palavra = ''
+    for letra in palavra_secreta:
+        if letra in recebe_palavra:
+            forma_palavra += letra
         else:
-            palavra_formada += '*'
-
-    print(f'Palavra formada: {palavra_formada}')
+            forma_palavra += '#'
     
-    if palavra_formada == palavra_secreta:
+    if forma_palavra == palavra_secreta:
         os.system('cls')
-        print('VOCÊ GANHOU!! PARABÉNS!!')
-        print(f'A palavra secreta: {palavra_secreta}')
-        print(f'Tentativas: {numero_tentativas}')
-        letras_acertadas = ''
-        numero_tentativas = 0
+        print(f'Parabéns a palavra secretá é "{palavra_secreta}" com {tentativas} tentativas!')
+
+
+
