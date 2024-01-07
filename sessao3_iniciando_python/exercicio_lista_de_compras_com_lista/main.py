@@ -1,3 +1,5 @@
+import os
+
 lista_compras = []
 while True:
     print('Selecione uma opção')
@@ -10,12 +12,14 @@ while True:
     
     # Adicionar itens
     if opcao == 'i':
+        os.system('cls')
         item_adicionado = input('Digite o item: ')
         lista_compras.append(item_adicionado)
         print('Item adicionado!')
     
     # Listar itens com indices
     if opcao == 'l':
+        os.system('cls')
         if lista_compras == []:
             print('Lista vazia, adicione para mostrar itens.')
         else:
@@ -25,6 +29,7 @@ while True:
     
     # Apagar itens da lista
     if opcao == 'a':
+        os.system('cls')
         if lista_compras == []:
             print('Lista vazia, não é possível apagar.')
         else:
@@ -37,6 +42,9 @@ while True:
             apaga_indice = int(apaga_item)
             print(f'{lista_compras[apaga_indice]} apagado da lista')
             lista_compras.pop(apaga_indice)
-        except:
+        except IndexError:
             input('Item não encontrado!')
+            continue
+        except TypeError:
+            input('Digite número do indice apenas!')
             continue
