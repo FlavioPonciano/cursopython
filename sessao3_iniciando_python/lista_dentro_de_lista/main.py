@@ -16,7 +16,7 @@ print(salas[2][3][2]) # Acessando o valor dentro da tupla que está dentro da li
 
 print('#' * 15)
 
-# for interno
+# for interno, o for maior faz a parte de fora e o for menor faz o interno e assim por diante.
 
 for sala in salas:  
     print(f' A sala é {sala}')
