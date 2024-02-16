@@ -30,6 +30,7 @@ duplica = executa(
 
 print(duplica(2))
 
+# Posso passar vários args em lambda
 print(
     executa(
         lambda *args: sum(args),
