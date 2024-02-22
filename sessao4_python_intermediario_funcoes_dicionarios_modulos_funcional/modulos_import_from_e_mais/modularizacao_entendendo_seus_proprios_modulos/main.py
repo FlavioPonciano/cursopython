@@ -12,7 +12,7 @@ try:
 except ModuleNotFoundError:
     ...
 
-import modulo_python
+# import modulo_python
 # Importar um módulo de uma mesma pasta
 import importado_modulo
 print('Esse módulo se chama', __name__)
