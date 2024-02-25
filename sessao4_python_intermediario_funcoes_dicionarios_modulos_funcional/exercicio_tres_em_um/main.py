@@ -1,7 +1,4 @@
 # Exercícios
-
-#from dados.produtos_modulo import produtos
-#from modulos.funcoes import copia_profunda, aumenta_precos, nome_crescente, nome_decrescente, preco_crescente, preco_decrescente
 from dados import produtos
 from modulos import copia_profunda, aumenta_precos, nome_crescente, nome_decrescente, preco_crescente, preco_decrescente
 
