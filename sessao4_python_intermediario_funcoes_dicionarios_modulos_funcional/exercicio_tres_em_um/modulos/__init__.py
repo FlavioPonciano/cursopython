@@ -1,0 +1,1 @@
+from modulos.funcoes import *
