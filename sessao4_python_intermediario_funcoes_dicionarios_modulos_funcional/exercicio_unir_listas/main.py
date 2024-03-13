@@ -18,3 +18,17 @@ estado = ['BA', 'SP', 'MG', 'RJ']
 
 lista_intercalada = zipper(cidade, estado)
 print(lista_intercalada)
+
+print('*' * 10, 'Versão do Professor:', '*' * 10)
+
+def zipper2(lista1, lista2):
+    intervalo_maximo = min(len(lista1), len(lista2))
+    return [
+        (lista1[i], lista2[i]) for i in range(intervalo_maximo)
+    ]
+
+
+l1 = ['Salvador', 'Ubatuba', 'Belo Horizonte']
+l2 = ['BA', 'SP', 'MG', 'RJ']
+
+print(zipper2(l1, l2))
